@@ -1,0 +1,162 @@
+/* Colores y tipografía del LAPD */
+:root {
+    --blue: #1e2a5d; /* LAPD Blue */
+    --gold: #ffd700; /* Gold accents */
+    --gray: #2e2e2e; /* Dark Gray */
+    --black: #0f0f0f; /* Black */
+    --white: #fff; /* White text */
+    --rojo: #e06666;
+}
+
+/* Body */
+body {
+    background-color: var(--black);
+    color: var(--white);
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Barra Lateral */
+.sidebar {
+    background-color: var(--blue);
+    width: 250px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar .logo {
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.sidebar ul li {
+    margin-bottom: 20px;
+}
+
+.sidebar ul li a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    display: block;
+    text-align: center;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    background-color: var(--gold);
+}
+
+/* Contenido */
+.content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2em;
+    color: var(--gold);
+}
+
+.content-box {
+    background-color: var(--gray);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.content-box h3 {
+    color: var(--gold);
+}
+.content-box h4 {
+    color: var(--gold)
+}
+
+.content-box p {
+    color: var(--white);
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+
+/*botones*/
+
+
+
+/* Estilos para el botón */
+/* Estilos para el botón de copiar con emoji */
+button {
+    background-color: transparent; /* Fondo transparente */
+    color: #4CAF50; /* Color del ícono */
+    border: none;  /* Sin borde */
+    font-size: 18px;  /* Tamaño de fuente para el ícono */
+    cursor: pointer;  /* Puntero como mano */
+    padding: 5px; /* Espacio pequeño alrededor del ícono */
+    border-radius: 50%; /* Botón redondo */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Efectos al interactuar */
+}
+
+/* Efecto al pasar el ratón sobre el botón */
+button:hover {
+    background-color: #f1f1f1; /* Fondo claro */
+    transform: scale(1.1);  /* Aumenta ligeramente el tamaño */
+}
+
+/* Efecto al presionar el botón */
+button:active {
+    background-color: #e0e0e0;  /* Fondo más oscuro al hacer clic */
+    transform: scale(0.95);  /* Reduce ligeramente el tamaño */
+}
+
+/* Agrega espacio entre el párrafo y el botón */
+p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/*alertas/*
+
+/* Estilo para la alerta personalizada */
+.alerta {
+    position: fixed; /* La alerta se mantendrá en una posición fija en la pantalla */
+    top: 20px; /* Se muestra en la parte superior */
+    left: 50%; /* Centrada horizontalmente */
+    transform: translateX(-50%); /* Centrado preciso */
+    background-color: #4CAF50; /* Fondo verde */
+    color: white; /* Texto blanco */
+    padding: 10px 20px; /* Relleno */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de fuente */
+    z-index: 9999; /* Asegura que la alerta esté por encima de otros elementos */
+    opacity: 1; /* Visible de inmediato */
+    transition: opacity 0.3s ease; /* Efecto de desvanecimiento */
+}
+
+/* Efecto de desvanecimiento cuando desaparece la alerta */
+.alerta.fade-out {
+    opacity: 0;
+}
+
